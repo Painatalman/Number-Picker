@@ -1,0 +1,35 @@
+// default styling for npicker
+
+// nPicker
+#nPicker, .nPicker {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    @include box-shadow(inset 0 1px 1px #eaeaea);
+    @include border-radius(4px);
+    text-align: center;
+    &::before {
+        content: "";
+        height: 0;
+        width: 0;
+        border-width: 10px;
+        display: block;
+        margin: auto;
+        border-style: double;
+        border-color: transparent;
+        border-bottom-color: white;
+        margin-top: -20px;
+    }
+}
+.nPicker__key {
+    display: inline-block;
+    width: 33%;
+    border-radius: 0;
+    transition: border-radius 200ms ease-out;
+    &:hover {
+        background: lightgray;
+        border-radius: 100%;
+    }
+    &--0 {
+        width: 100%;
+  
